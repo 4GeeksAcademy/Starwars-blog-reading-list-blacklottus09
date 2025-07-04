@@ -16,12 +16,12 @@ export const Home = () => {
 	return (
         <div className="container mt-5 px-4">
             <h2 className="text-danger mb-3">Characters</h2>
-            <div className="d-flex overflow-auto pb-3">
+            <div className="d-flex overflow-auto pb-3 card-body">
                 {characters.map((character) => {
                     const isCharacterFavorite = store.favorites.some(fav => fav.uid === character.uid && fav.type === 'character');
                     
                     return (
-                        <div key={character.uid} className="card border-light shadow-sm m-2">
+                        <div key={character.uid} className="card border-light shadow-sm m-2 card-width">
                             <img 
                                 src={`https://raw.githubusercontent.com/vieraboschkova/swapi-gallery/refs/heads/main/static/assets/img/people/${character.uid}.jpg`} 
                                 className="card-img-top" 
@@ -54,7 +54,7 @@ export const Home = () => {
                     const isPlanetFavorite = store.favorites.some(fav => fav.uid === planet.uid && fav.type === 'planet');
 
                     return (
-                        <div key={planet.uid} className="card border-light shadow-sm m-2" >
+                        <div key={planet.uid} className="card border-light shadow-sm m-2 card-width" >
                             <img 
                                 src="https://picsum.photos/200/300" 
                                 className="card-img-top" 

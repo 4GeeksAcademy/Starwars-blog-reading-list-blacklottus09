@@ -1,6 +1,6 @@
-.card-image{
-    width: 400px;
-}
 .details-image{
     height: 800px;
+}
+.card-width {
+  min-width: 18rem;
 }
